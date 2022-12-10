@@ -43,6 +43,11 @@ if __name__ == '__main__':
         st.subheader("Create New Account")
         new_user = st.text_input("Username")
         new_password = st.text_input("Password", type='password') 
+        dpt = ["Applied Physics", "Biomedical Engineering", "Center for Urban Science and Progress", "Chemical and Biomolecular Engineering",
+        "Civil and Urban Engineering", "Computer Science and Engineering", "Electrical and Computer Engineering",
+        "Finance and Risk Engineering", "Mathematics", "Mechanical and Aerospace Engineering", "Technology, Culture and Society", 
+        "Technology Management and Innovation"]
+        choice = st.selectbox("Department", dpt)
 
         if st.button("Sign Up"):
             create_user(new_user, new_password)
