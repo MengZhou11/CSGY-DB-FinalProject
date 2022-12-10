@@ -8,8 +8,9 @@ def show_news_for_admin():
     st.write("hi admin")
 
 def create_user():
+    st.write("creating user...")
 def check_user_exit(username, password):
-    st.write("")
+    st.write("checking if user exit...")
 
 
 
