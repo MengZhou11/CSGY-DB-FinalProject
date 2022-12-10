@@ -8,9 +8,15 @@ def show_news_for_admin():
     st.write("hi admin")
 
 def create_user():
-    st.write("creating user...")
+    st.write("Creating user...")
+    sql_create_user = f"Select b.player_name,b.player_position,b.team_name,b.age,b.country,b.transfer_status,b.market_value,b.finishing,b.passing,b.tackling,b.handling FROM Players as a, Players as b where a.player_name='{similar_player}' and a.player_name!=b.player_name and ( a.handling=b.handling-1 or a.handling=b.handling+1 or a.handling=b.handling)"
 def check_user_exit(username, password):
-    st.write("checking if user exit...")
+    st.write("Checking if user exit...")
+    sql_check_user_exit = f"SELECT username FROM student WHERE username='{username}' AND password='{password}'"
+    if(sql_check_user_exit==username):
+        st.write("You have logged in as {username}")
+        return True
+    return False
 
 
 
