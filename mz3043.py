@@ -17,8 +17,8 @@ if __name__ == '__main__':
     if choice == "News":
         st.subheader("NYU Campus News System")
 
-    if choice == "Login":
+    elif choice == "Login":
         st.subheader("Login Section")
 
-    if choice == "SignUp":
+    elif choice == "SignUp":
         st.subheader("Create New Account")
