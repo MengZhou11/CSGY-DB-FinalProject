@@ -14,7 +14,7 @@ def check_user_exit(username, password):
 
 
 
-def main():
+if __name__ == '__main__':
     st.title("NYU Campus News System")
     menu = ["News", "Login", "SignUp"] 
     choice = st.sidebar.selectbox("Menu", menu)
