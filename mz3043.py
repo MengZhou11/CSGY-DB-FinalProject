@@ -21,12 +21,12 @@ if __name__ == '__main__':
 
     if choice == "News":
         st.subheader("NYU Campus News System")
-        show_news_for_user
+        show_news_for_user()
 
     elif choice == "Login":
         st.subheader("Login Section")
-        username = st.sidebar.text_input("User Name")
-        password = st.sidebar.text_input("Password", type='password')
+        username = st.text_input("User Name")
+        password = st.text_input("Password", type='password')
         if st.button("Login"):
             if(check_user_exit(username, password)):
                 st.success("Logged In as {}".format(username))
