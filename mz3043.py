@@ -12,7 +12,7 @@ def show_news_for_admin():
 if __name__ == '__main__':
     st.title("NYU Campus News System")
     menu = ["News", "Login", "SignUp"] 
-    choice = st.sidebar.selectbox["Menu", menu]
+    choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "News":
         st.subheader("NYU Campus News System")
