@@ -36,6 +36,7 @@ if __name__ == '__main__':
         if st.button("Login"):
             if(check_user_exit(username, password)):
                 st.success("Logged In as {}".format(username))
+                show_news_for_user()
             else: 
                 st.Warning("Incorrect Username/Password")
 
@@ -47,7 +48,9 @@ if __name__ == '__main__':
         "Civil and Urban Engineering", "Computer Science and Engineering", "Electrical and Computer Engineering",
         "Finance and Risk Engineering", "Mathematics", "Mechanical and Aerospace Engineering", "Technology, Culture and Society", 
         "Technology Management and Innovation"]
-        choice = st.selectbox("Department", dpt)
+        type = ["Student", "Admin"]
 
+        choice = st.selectbox("Department", dpt)
+        choice = st.selectbox("Account Type", type)
         if st.button("Sign Up"):
-            create_user(new_user, new_password)
+            create_user(new_user, new_password, dpt, type)
